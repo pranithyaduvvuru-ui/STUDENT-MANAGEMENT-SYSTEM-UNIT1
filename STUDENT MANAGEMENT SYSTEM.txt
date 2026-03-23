@@ -1,0 +1,50 @@
+import java.util.*;
+class Student {
+String name;
+int age;
+String department;
+long mobile;
+String address;
+String mail;
+Student(String a, int b, String c, long d, String e, String f) {
+this.name = a;
+this.age = b;
+this.department = c;
+this.mobile = d;
+this.address = e;
+this.mail = f;
+}
+void displayStudentdetail() {
+System.out.println("Name: " + name);
+System.out.println("Age: " + age);
+System.out.println("Department: " + department);
+System.out.println("Mobile No: " + mobile);
+System.out.println("Address: " + address);
+System.out.println("E-Mail: " + mail);
+}
+}
+public class Main {
+public static void main(String[] args) {
+Scanner s = new Scanner(System.in);
+System.out.println("Enter number of students:");
+int n = s.nextInt();
+s.nextLine();
+Student[] detail = new Student[n];
+for (int i = 0; i < n; i++) {
+System.out.println("Enter details of student " + (i + 1));
+String name = s.nextLine();
+int age = s.nextInt();
+s.nextLine();
+String department = s.nextLine();
+long mobile = s.nextLong();
+s.nextLine();
+String address = s.nextLine();
+String mail = s.nextLine();
+detail[i] = new Student(name, age, department, mobile, address, mail);
+}
+for (int i = 0; i < n; i++) {
+System.out.println( );
+detail[i].displayStudentdetail();
+}
+}
+}
